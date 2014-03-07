@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pomodoro</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABigAAEboAATRkAAABy1ADRUsAA3Zu4ADDnVAFqA4QAUPMwAIUpMAFhxtQAKQvAAWnS1AAAn3wB/n+wAEkXwADNSmQBYeNMAKlK0AAAw6AAQOMEAHk6OAAU36wAZQL4AACPCAAcmsAATMpUAIlRHAA8wqgAqWvAAEjKnAAIzzgBLc+kAGEniAGeM6wAwYPAAWHraABg4sAAoYFAAGjqtAAAgwwAQOtoAFkXgAERluAA5X9wADzW6AB07nwAEIKAAGzquABRMQwAFNecAJVDdAAMhtQAFOu0ACSmgABlEWAAAI8QABCW4AA8vlwAAKMoAKUalAAAq0AAWMpcAEjKgAAYuwQAEMMcABTHKABU1oAAUNqwAGDigADNTqAA1VaUABSChAFiA7gAIKKcABj3uABU90wAlVvAAEjziADxcugApWfAAEDCtAAM1zgBPd+YAABiuAAAbtwAHLJAAUGquACA+qgADOjQADjjgABA44ABCauQADS2lACpY5QAUQ90AEDClABIyogAtXOgAFEXsADBf6ABNdeoADzS6AAU3zAAYOKIAGjmlAAQgowCMpO4AGD26AAoqnQAgST0AH0pAAC1WzgAAIMcABSe4AAAlzQAWQdgAACXWAAovtQADJ3EAMlt7ABVB6gAAKN8ADzK1ABAytQAkTMMAUnjiAAAYsAABG7AARWtjADdn7wAiPaAAcpXwACdAoAAAIMgAACfLAAAqywAFLcIALUejAAAt5gADMeAACjXaADNTtQAAIcMAMFjEADJXygAIKa4AIkKwACRErQAQMKgAEjKlAEhy7QAPMLEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASLFCPPQAAAAAAAAAAAAhxfhhtMZSVLwAAAAAAAH80dQkVZ5lFamluAAAAACNfIioHQzqTHR9pRhsAAACDTk92dHJWVUuXYkQ7AAAPURBMDo0+KYBrlmJANz8AZmQ2BnplXTkEGlJhMAKEACEXHmwkY4VBNXN8HwECiwBKMwyYW4cgiRmQLiZeSVgAAFwUjHtXgVM8iEJ9WYYAAAAtjitgTRx4kmiKdygNAAAAACUTFgMyWgoRBUgLAAAAAAAAAFR5J5E4cEcAAAAAAAAAAAAAbwAAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPg/AADgDwAAwAcAAIADAACAAwAAAAEAAAABAAAAAQAAAAEAAIADAACAAwAAwAcAAPAfAAD7/wAA9/8AAP//AAA=" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="tweak.css">
+  </head>
+  <body>
+    <div class="wrapper" v-cloak>
+      <header>
+        <span>P</span><img src="icon_15790.svg" width="23" height="23" alt="pomodoro timer icon" /><span>modoro Timer</span>
+      </header>
+      <section class="attribution">
+        <i>Tomato designed by José Campos from the Noun Project</i>
+      </section>
+      <section class="timer-settings">
+        <div><button type="button" v-on="click:start(1500)">Pomodoro</button></div>
+        <div><button type="button" v-on="click:start(300)">Short Break</button></div>
+        <div><button type="button" v-on="click:start(600)">Long Break</button></div>
+        <div><button type="button" v-on="click:start(5)">Custom</button></div>
+      </section>
+      <section class="timer-display">
+        <div><span>{{display}}</span></div>
+      </section>
+      <section class="timer-controls">
+          <div><button type="button" v-on="click:start(time)">Start</button></div>
+          <div><button type="button" v-on="click:stop">Stop</button></div>
+          <div><button type="button" v-on="click:reset">Reset</button></div>
+      </section>
+      <section>
+      </section>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
